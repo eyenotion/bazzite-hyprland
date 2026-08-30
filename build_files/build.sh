@@ -10,8 +10,11 @@ cp -avf "/ctx/system_files"/. /
 # Enable Hyprland COPR
 dnf5 -y copr enable giperborey/Hyprland
 
-# Install Hyprland
-dnf5 install -y hyprland
+# Install Hyprland, Kitty and Quickshell
+dnf5 install -y \
+    hyprland \
+    kitty \
+    quickshell
 
 # Disable COPR so it isn't enabled in the final image
 dnf5 -y copr disable giperborey/Hyprland

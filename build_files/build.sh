@@ -9,19 +9,25 @@ cp -avf "/ctx/system_files"/. /
 
 ### Install packages
 
-# Hyprland
+### Hyprland
+
 dnf5 -y copr enable giperborey/Hyprland
-dnf5 install -y hyprland
+
+dnf5 install -y \
+    hyprland \
+    kitty
+
 dnf5 -y copr disable giperborey/Hyprland
 
-# Terminal and Quickshell
-dnf5 install -y \
-    kitty \
-    quickshell
 
-# DankMaterialShell
+### DankMaterialShell
+
 dnf5 -y copr enable avengemedia/dms
-dnf5 install -y dms
+
+dnf5 install -y \
+    dms \
+    quickshell-git
+
 dnf5 -y copr disable avengemedia/dms
 
 #### Example for enabling a System Unit File
